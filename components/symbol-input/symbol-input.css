@@ -1,0 +1,64 @@
+.ticker-input-container {
+  display: flex;
+  gap: var(--space-sm);
+  flex-direction: column;
+}
+
+.ticker-input {
+  flex: 1;
+}
+
+.ticker-input .MuiOutlinedInput-root {
+  background-color: hsl(var(--input-bg));
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.ticker-input .MuiOutlinedInput-root:hover {
+  background-color: hsl(var(--surface));
+}
+
+.ticker-input .MuiOutlinedInput-root.Mui-focused {
+  background-color: hsl(var(--surface));
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2);
+}
+
+.ticker-input .MuiOutlinedInput-input {
+  font-size: 0.9375rem;
+  padding: 0.875rem 0.75rem;
+}
+
+.input-icon {
+  color: hsl(var(--primary));
+}
+
+.send-button {
+  height: 48px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-transform: none;
+  font-size: 1rem;
+  padding: 0 var(--space-lg);
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 12px hsl(var(--primary) / 0.25);
+}
+
+.send-button:hover {
+  box-shadow: 0 6px 16px hsl(var(--primary) / 0.35);
+  transform: translateY(-1px);
+}
+
+.send-button:active {
+  transform: translateY(0);
+}
+
+@media (min-width: 640px) {
+  .ticker-input-container {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
+  .send-button {
+    min-width: 120px;
+  }
+}
