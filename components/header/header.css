@@ -1,0 +1,54 @@
+.header {
+  background: linear-gradient(135deg, hsl(var(--surface)) 0%, hsl(var(--surface-elevated)) 100%);
+  border-bottom: 1px solid hsl(var(--border));
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.header-content {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.header-icon {
+  color: hsl(var(--primary));
+  font-size: 1.75rem;
+}
+
+.header-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  font-size: 1.25rem;
+}
+
+.header-subtitle {
+  color: hsl(var(--foreground-muted));
+  font-size: 0.875rem;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .header-subtitle {
+    display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: var(--space-sm) var(--space-md);
+  }
+  
+  .header-title {
+    font-size: 1.125rem;
+  }
+}
