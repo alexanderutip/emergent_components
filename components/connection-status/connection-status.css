@@ -1,0 +1,53 @@
+.connection-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-chip {
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+
+.status-connected {
+  animation: pulse-success 2s ease-in-out infinite;
+}
+
+.status-connecting {
+  animation: pulse-warning 1.5s ease-in-out infinite;
+}
+
+.status-error {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes pulse-success {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulse-warning {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
